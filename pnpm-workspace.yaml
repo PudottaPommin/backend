@@ -1,0 +1,6 @@
+packages:
+  - 'packages/dota'
+  - 'packages/settings'
+  - 'packages/twitch/events'
+  - 'packages/twitch/chat'
+    

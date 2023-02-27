@@ -7,7 +7,6 @@
   "main": "src/index.ts",
   "exports": "./dist/index.js",
   "type": "module",
-  "packageManager": "yarn@1.22.19",
   "private": true,
   "scripts": {
     "studio": "doppler run -- yarn prisma studio --schema ./prisma/postgres.prisma",
@@ -24,11 +23,10 @@
     "update-np": "doppler run -- bash ../services/mongodb/updatenps.sh",
     "pullmongo": "doppler run -- prisma db pull --schema ./prisma/mongo.prisma --force",
     "pullpsql": "doppler run -- prisma db pull --schema ./prisma/postgres.prisma",
-    "pushpsql": "doppler run -- prisma db push --schema ./prisma/postgres.prisma",
-    "prepare": "cd ../../ && husky install packages/dota/.husky"
+    "pushpsql": "doppler run -- prisma db push --schema ./prisma/postgres.prisma"
   },
   "dependencies": {
-    "@dotabod/settings": "^1.0.0",
+    "@dotabod/settings": "workspace:*",
     "@node-steam/id": "^1.2.0",
     "@twurple/eventsub": "5.3.1",
     "@types/long": "^5.0.0",
